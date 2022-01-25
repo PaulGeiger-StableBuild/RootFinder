@@ -9,4 +9,4 @@ Uses Newton's method to solve for a single root of an equation, given an initial
   
   
 Made my own expression evaluation tool and derivative solver in C++.
-Due to the way that the expression evaluator works with floating point values, the maximum precision is around 1E-5. You could improve this by modifying how floating point values are converted to strings and entered into the equations, or by abandonning the full string-based evaluation approach I used. As this was more of a demo than anything I went with a simple approach here, and I recognize this is one of the flaws of this approach for evaluation. 
+Due to the way that the expression evaluator works with floating point values, the maximum precision is around 1E-5. You could improve this by modifying how floating point values are converted to strings and entered into the equations, or by abandoning the full string-based evaluation approach I used. As this was more of a demo than anything I went with a simple approach here, and I recognize this is one of the flaws of this approach for evaluation. 
