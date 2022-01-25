@@ -54,7 +54,7 @@ int dllImplementation::SolveForRoot(const char* expr, size_t exprLen, double ini
 			if (std::fabs(derivVal) < VERY_SMALL_VALUE)
 			{
 				logger->Log("Derivative found to be zero, exiting");
-				return iterNum-1; // cannot solve
+				return 0; // cannot solve
 			}
 			xn -= funcVal / derivVal;
 			funcVal = function.Evaluate(xn);

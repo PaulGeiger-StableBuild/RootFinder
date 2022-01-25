@@ -113,7 +113,7 @@ class MyUI(QMainWindow):
         
         # Add the editable textboxes
         size = 30
-        self.initialGuessBox = self._createStandardTextbox("0.0", size)
+        self.initialGuessBox = self._createStandardTextbox("1.1", size) 
         self.maxIterations = self._createStandardTextbox("10000", size)
         self.goalErr = self._createStandardTextbox("1.0E-4", size)
         
@@ -274,6 +274,9 @@ class MyEvaluator:
         cGoalErr = c_double(goalErr)
         cExpr = create_string_buffer(expression.encode())
         numResults = self.lib.SolveForRoot(cExpr.value, len(expression), cInitGuess, cMaxNum, cGoalErr, results)
+        if (numResults == 0):
+            return ERROR_MSG
+        
         arrResults = np.ctypeslib.as_array(results)
         
         plt.plot(arrResults[0:numResults-1])
