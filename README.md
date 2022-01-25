@@ -5,7 +5,7 @@ I created this project in a couple days just to experiment with ctypes as a meth
 
 You can turn off logging in the framework.h by setting IS_DEBUG=false if you really wanted to improve speed in the C++ code.
 
-Uses Newton's method to solve for a single root of an equation, given an initial guess, up to a precision given by the user. For example if you type "x^2-2" it will find the derivative (2x), and use these two expressions to solve for an approximation of the square root of two iteratively. As another example, you can use it as a calculator by writing (x-[expression]).
+Uses Newton's method to solve for a single root of an equation, given an initial guess, up to a precision given by the user. For example if you type "x^2-2" it will find the derivative (2x), and use these two expressions to solve for an approximation of the square root of two iteratively. As another example, you can use it as a calculator by writing "x-(expression)".
   
   
 Made my own expression evaluation tool and derivative solver in C++.
